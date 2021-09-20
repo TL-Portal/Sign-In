@@ -56,6 +56,9 @@
 		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com" 
 		data-callback="handleCredentialResponse">
 	</div>
+	
+	<img src="https://drive.google.com/file/d/11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22/view?usp=sharing">
+	<br>
 
 	<div class="g_id_signin" 
 		data-shape="circle" 
