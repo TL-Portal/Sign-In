@@ -44,11 +44,19 @@
 	<a href="#" onclick="signOut();">Sign out</a>
 -->
 	<script src="https://accounts.google.com/gsi/client" async defer></script>
+<!--	
 	<div id="g_id_onload" 
 		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com" 
 		data-ux_mode="redirect" 
 		data-login_uri="https://sites.google.com/tlmshk.edu.hk/portal">
 	</div>
+-->
+	<div id="g_id_onload"
+		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com"
+		data-callback="handleCredentialResponse">
+	</div>
+	<div class="g_id_signin" data-type="standard"></div>
+
 	<div class="g_id_signin" data-type="standard"></div>
 
 	<div class="g_id_signout">Sign Out</div>
