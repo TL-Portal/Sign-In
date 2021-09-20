@@ -57,7 +57,7 @@
 		data-callback="handleCredentialResponse">
 	</div>
 	
-	<table style="margin:auto; border:0px; padding:20px">
+	<table style="margin:auto; border:0px; padding:50px">
 		<tr>
 			<td align="center"><img src="https://drive.google.com/uc?export=view&id=11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22"></td>
 		</tr>
