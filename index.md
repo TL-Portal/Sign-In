@@ -57,7 +57,9 @@
 		data-callback="handleCredentialResponse">
 	</div>
 	
-	<img src="https://drive.google.com/file/d/11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22/view?usp=sharing">
+	<div text-align="center">
+		<img src="https://drive.google.com/file/d/11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22/view?usp=sharing" width="350" height="75">
+	</div>
 	<br>
 
 	<div class="g_id_signin" 
