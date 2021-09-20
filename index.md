@@ -49,7 +49,7 @@
 	<div id="g_id_onload" 
 		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com" 
 		data-ux_mode="redirect" 
-		data-login_uri="https://tl-portal.github.io/Sign-In/">
+		data-login_uri="https://sites.google.com/tlmshk.edu.hk/portal">
 	</div>
 	
 <!--	
@@ -66,10 +66,10 @@
 		<tr><td align="center" cellpadding="20">
 			<div class="g_id_signin" 
 				data-locale="en" 
-				data-shape="pill" 
+				data-shape="circle" 
 				data-size="large" 
 				data-theme="filled_blue" 
-				data-type="icon">
+				data-type="standard">
 			</div>
 		</td></tr>
 	</table>
