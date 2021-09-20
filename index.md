@@ -57,9 +57,7 @@
 		data-callback="handleCredentialResponse">
 	</div>
 	
-	<div text-align="center">
-		<img src="https://drive.google.com/file/d/11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22/view?usp=sharing" width="350" height="75">
-	</div>
+	<iframe src="https://drive.google.com/file/d/11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22/view?usp=sharing" height="350" width="75" title="TL-Portal"></iframe>
 	<br>
 
 	<div class="g_id_signin" 
