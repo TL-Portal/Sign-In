@@ -43,6 +43,7 @@
 	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>  
 	<a href="#" onclick="signOut();">Sign out</a>
 -->
+
 	<script src="https://accounts.google.com/gsi/client" async defer></script>
 <!--	
 	<div id="g_id_onload" 
