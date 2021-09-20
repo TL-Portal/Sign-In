@@ -59,7 +59,7 @@
 	
 	<table border="0" align="center" width="350 cellpadding="5" cellspacing="5">
 		<tr>
-			<td align="center"><img src="https://drive.google.com/thumbnail?id=11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22" height="350" width="75"></td>
+			<td align="center"><img src="https://drive.google.com/thumbnail?id=11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22" width="350" height="75"></td>
 		</tr>
 		<tr><td align="center">
 			<div class="g_id_signin" 
