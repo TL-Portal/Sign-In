@@ -43,6 +43,8 @@
 	<div class="g-signin2" onClick="signIn();" data-theme="dark"></div>
     
 	<a href="#" onclick="signOut();">Sign out</a>
+<!--
 	<div class="g_id_signout">Sign Out</div>
+-->
 </body>
 </html>
