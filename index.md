@@ -65,6 +65,7 @@
 		</tr>
 		<tr><td align="center" cellpadding="20">
 			<div class="g_id_signin" 
+				data-onsuccess="signIn"
 				data-locale="en" 
 				data-shape="circle" 
 				data-size="large" 
