@@ -53,7 +53,10 @@
 	</div>
 -->
 	<div id="g_id_onload"
-		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com"
+		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com" 
+	     	data-shape="circle" 
+	     	data-size="large" 
+	     	data-theme="filled_blue" 
 		data-callback="handleCredentialResponse">
 	</div>
 
