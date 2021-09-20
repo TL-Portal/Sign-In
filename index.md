@@ -59,9 +59,9 @@
 	
 	<table align="center" border="0">
 		<tr>
-			<td style="text-align:center; padding:20px"><img src="https://drive.google.com/uc?export=view&id=11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22"></td>
+			<td align="center" cellpadding="20"><img src="https://drive.google.com/uc?export=view&id=11eLQdbP-AUW8jHxRF9qgTrSU2gTJeX22"></td>
 		</tr>
-		<tr><td style="text-align:center; padding:20px">
+		<tr><td align="center" cellpadding="20">
 			<div class="g_id_signin" 
 				data-shape="circle" 
 				data-size="large" 
