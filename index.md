@@ -65,10 +65,11 @@
 		</tr>
 		<tr><td align="center" cellpadding="20">
 			<div class="g_id_signin" 
-				data-shape="circle" 
+				data-locale="en" 
+				data-shape="pill" 
 				data-size="large" 
 				data-theme="filled_blue" 
-				data-type="standard">
+				data-type="icon">
 			</div>
 		</td></tr>
 	</table>
