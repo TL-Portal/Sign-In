@@ -38,10 +38,11 @@
         }
 	</script>
 <!--
-    <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+	<div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
 -->
-    <div class="g-signin2" onClick="signIn();" data-theme="dark"></div>
+	<div class="g-signin2" onClick="signIn();" data-theme="dark"></div>
     
-    <a href="#" onclick="signOut();">Sign out</a>
+	<a href="#" onclick="signOut();">Sign out</a>
+	<div class="g_id_signout">Sign Out</div>
 </body>
 </html>
