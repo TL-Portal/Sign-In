@@ -49,7 +49,7 @@
 	<div id="g_id_onload" 
 		data-client_id="407887437328-cj7hp71din4gtpdr9tm7p5v50eveckg6.apps.googleusercontent.com" 
 		data-ux_mode="redirect" 
-		data-login_uri="https://sites.google.com/tlmshk.edu.hk/portal">
+		data-login_uri="https://tl-portal.github.io/Sign-In/">
 	</div>
 	
 <!--	
