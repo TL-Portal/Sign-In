@@ -204,7 +204,7 @@
 		function redirect()
 		{
 //			window.location = 'https://www.tlmshk.edu.hk';
-			window.location = 'https://sites.google.com/tlmshk.edu.hk/login';
+			window.location = 'https://tl-portal.github.io/Sign-In/';
 		}
 	</script>
     
