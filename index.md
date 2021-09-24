@@ -41,7 +41,7 @@
                 </td>
                 <td width="12%" align="center">
                 	<a href="https://sites.google.com/tlmshk.edu.hk/portal" border="0" alt="TL-Portal" target="portal">
-                    	<img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" width="140" height="30">
+                    	<img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" width="188" height="40">
 					</a>
 				</td>
                 <td width="44%">
