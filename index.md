@@ -1,57 +1,79 @@
 <html>
 <head>
-    <title>TL-Portal</title>
+    <title>Sign In TL-Portal</title>
     <meta charset='utf-8' />
 
 	<style>    
-		button, input[type=button], input[type=submit], input[type=reset]
+		.button
 		{
 			font-family: "Trebuchet MS", "Arial Narrow", Helvetica, sans-serif;
 			font-size: 1em;
 			width: 100px;
+			height: 30px;
 			background-color: #eebb00; /* orange */
 			color: white;
 			border: none;
-			border-radius: 15%;
+			border-radius: 38%;
 			padding: 3px 3px;
 			margin: 3px 3px;
 			cursor: pointer;
+			text-align: center;
 			text-decoration: none;
 			display: inline-block;
-			-webkit-transition-duration: 0.3s; /* Safari */
 			transition-duration: 0.3s;
+			-webkit-transition-duration: 0.3s; /* Safari */
 		}
-		button:hover, input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover
+		.button:hover
 		{
 			background-color: #ccff66;
 			color: #4caf50; /* green */
 			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		}
+		.buttonAlarm
+		{
+			font-size: 1.2em;
+			width: 120px;
+			height: 30px;
+			background-color: #ff5500;
+			color: yellow;
+			-webkit-animation: glowing 2500ms infinite;
+			-moz-animation: glowing 2500ms infinite;
+			-o-animation: glowing 2500ms infinite;
+			animation: glowing 2500ms infinite;
+		}
+		.buttonAlarm:hover
+		{
+			color: black;
+		}
+		@-webkit-keyframes glowing 
+		{
+			0% { background-color: #ff5500; -webkit-box-shadow: 0 0 3px #ff5500; }
+			50% { background-color: #eebb00; -webkit-box-shadow: 0 0 20px #eebb00; }
+			100% { background-color: #ff5500; -webkit-box-shadow: 0 0 3px #ff5500; }
+		}
+		@-moz-keyframes glowing 
+		{
+			0% { background-color: #ff5500; -moz-box-shadow: 0 0 3px #ff5500; }
+			50% { background-color: #eebb00; -moz-box-shadow: 0 0 20px #eebb00; }
+			100% { background-color: #ff5500; -moz-box-shadow: 0 0 3px #ff5500; }
+		}
+		@-o-keyframes glowing 
+		{
+			0% { background-color: #ff5500; box-shadow: 0 0 3px #ff5500; }
+			50% { background-color: #eebb00; box-shadow: 0 0 20px #eebb00; }
+			100% { background-color: #ff5500; box-shadow: 0 0 3px #ff5500; }
+		}
+		@keyframes glowing 
+		{
+			0% { background-color: #ff5500; box-shadow: 0 0 3px #ff5500; }
+			50% { background-color: #eebb00; box-shadow: 0 0 20px #eebb00; }
+			100% { background-color: #ff5500; box-shadow: 0 0 3px #ff5500; }
+		}
 	</style>
 
 </head>
 <body>
-	<div id="header" style="visibility:hidden; height:25px; margin-top:0px; margin-left:0px">
-        <table width="100%" border="0">
-            <tr>
-                <td width="44%" align="right">
-                	<font face="Arial" size="2">
-                        <div id="user"></div>
-					</font>
-                </td>
-                <td width="12%" align="center">
-                	<a href="https://sites.google.com/tlmshk.edu.hk/portal" border="0" alt="TL-Portal" target="portal">
-                    	<img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" width="188" height="40">
-					</a>
-				</td>
-                <td width="44%">
-                    <button id="signout-button" onClick="signOut()">Sign Out</button>
-                </td>
-            </tr>
-        </table>
-	</div>
-	
-    <div id="signin" style="display:block; height:auto; margin-top:25px; margin-left:0px">
+    <div id="signin" style="display:block; margin-top:30px; margin-left:0px; width:100%">
         <p align="center">
         	<!-- School Badge -->
             <img src="https://drive.google.com/uc?export=view&id=1pwPSIdBLY4oNaFOsfVAF6kgMH8C-1zOs" height="35%">
@@ -59,21 +81,28 @@
         	<!-- TL-Portal -->
         	<img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" height="12%">
             <br><br>
-            <!--Add buttons to initiate auth sequence and sign out-->
-            <button id="signin-button" onClick="signIn()">Sign In</button>
+            <!--Add buttons to initiate auth sequence and sign in-->
+            <button class="button" id="signin-button" onClick="signIn()">Sign In</button>
         </p>
 	</div>
     
-    <div id="content" style="display:none; height:auto; margin-top:25px; margin-left:0px">
-<!--	
-        <iframe 
-        	id="portal" 
-            name="portal" 
-            title="TL-Portal" 
-            style="border:0px; width:100%; height:100%; margin-top:0px; margin-left:0px">
-        </iframe>
--->    
+	<div id="signed" style="display:none; margin-top:30px; margin-left:0px; width:100%">
+        <p align="center">
+        	<!-- User Info -->
+            <font face="Arial">
+                <h2><div id="user"></div></h2>
+            </font>
+        	<!-- TL-Portal -->
+            <p>Welcome to</p><br>
+            <a href="https://sites.google.com/tlmshk.edu.hk/portal" border="0" alt="TL-Portal" target="portal">
+                <img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" width="282" height="60">
+            </a>
+            <!--Add buttons to initiate auth sequence and sign out-->
+            <p>Remember to</p><br>
+            <button class="button buttonAlarm" id="signout-button" onClick="signOut()">Sign Out</button>
+        </p>
 	</div>
+	
     <iframe id="signout" name="signout" style="display:none" onload="redirect()"></iframe>
     
     <script type="text/javascript">
@@ -129,7 +158,9 @@
 			if (isSignedIn) 
 			{
 				makeApiCall();
-				showPortal();
+				signin.style.display = 'none';
+				signed.style.display = 'block';
+				window.open("https://sites.google.com/tlmshk.edu.hk/portal", "_blank");
 			} 
 		}
 		
@@ -140,22 +171,7 @@
 		
 		function signOut(event) 
 		{	
-//			gapi.auth2.getAuthInstance().signOut();
-/*
-			var auth2 = gapi.auth2.getAuthInstance();
-			auth2.signOut().then(function ()
-			{
-				auth2.disconnect();
-			});
-*/
-
-//			document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=https://www.google.com/accounts/optintoaccountchooser?optout=1";
 			document.getElementById('signout').src = "https://www.google.com/accounts/Logout";			
-/*
-			header.style.visibility = 'hidden';
-			login.style.display = 'block';
-			content.style.display = 'none';	
-*/
 		}
 
 		// Load the API and make an API call.  Display the results on the screen.
@@ -174,37 +190,10 @@
 			});
 		}
 		
-		function showPortal() 
-		{
-			var portal = document.createElement('iframe');
-			portal.setAttribute('id', 'portal');
-			portal.setAttribute('name', 'portal');
-			portal.setAttribute('src', 'https://sites.google.com/tlmshk.edu.hk/portal');
-			portal.style.marginTop = "25px";
-			portal.style.marginLeft = "0px";
-			portal.style.border = "0px";
-			portal.style.width = "100%";
-			portal.style.height = "100%";
-			document.getElementById('content').appendChild(portal);
-
-			header.style.visibility = 'visible';
-			content.style.display = 'block';
-			signin.style.display = 'none';
-
-/*
-			var p = document.getElementById('portal');
-			p.src = "https://sites.google.com/tlmshk.edu.hk/portal";
-			p.contentWindow.location.reload();
-			content.style.display = 'block';
-			header.style.visibility = 'visible';
-			signin.style.display = 'none';
-*/
-		}
-		
 		function redirect()
 		{
-//			window.location = 'https://www.tlmshk.edu.hk';
-			window.location = 'https://tl-portal.github.io/Sign-In/';
+			// TL-Portal Sign In Page
+			window.location = 'http://localhost/portal';
 		}
 	</script>
     
