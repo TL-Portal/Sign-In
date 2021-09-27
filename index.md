@@ -248,7 +248,7 @@
 		function redirect()
 		{
 			// TL-Portal Sign In Page
-			window.location = 'http://localhost/portal';
+			window.location = 'https://tl-portal.github.io/Sign-In/';
 		}
 	</script>
     
