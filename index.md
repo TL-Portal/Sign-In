@@ -36,10 +36,10 @@
 			height: 30px;
 			background-color: #ff5500;
 			color: yellow;
-			-webkit-animation: glowing 2500ms infinite;
-			-moz-animation: glowing 2500ms infinite;
-			-o-animation: glowing 2500ms infinite;
-			animation: glowing 2500ms infinite;
+			-webkit-animation: glowing 2000ms infinite;
+			-moz-animation: glowing 2000ms infinite;
+			-o-animation: glowing 2000ms infinite;
+			animation: glowing 2000ms infinite;
 		}
 		.buttonAlarm:hover
 		{
@@ -91,20 +91,28 @@
         	<!-- User Info -->
             <font face="Arial">
                 <h2><div id="user"></div></h2>
+                <p align="center">You have signed in</p> 
             </font>
+        </p>
+        <p align="center">
         	<!-- TL-Portal -->
-            <p>Welcome to</p><br>
             <a href="https://sites.google.com/tlmshk.edu.hk/portal" border="0" alt="TL-Portal" target="portal">
                 <img src="https://drive.google.com/uc?export=view&id=1lF8j8LglJ5RP6c1v0MYf5z1_lfT6hMHj" width="282" height="60">
             </a>
+        </p>
+        <br><br><br><br><br>
+        <p align="center">
             <!--Add buttons to initiate auth sequence and sign out-->
-            <p>Remember to</p><br>
             <button class="button buttonAlarm" id="signout-button" onClick="signOut()">Sign Out</button>
         </p>
+        <a id="portal_link" href="#" onclick="
+            return intervalListensForRequestResponse();
+        "></a>        
 	</div>
 	
     <iframe id="signout" name="signout" style="display:none" onload="redirect()"></iframe>
     
+	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
     <script type="text/javascript">
 		// Enter an API key from the Google API Console:
 		//   https://console.developers.google.com/apis/credentials
@@ -160,10 +168,56 @@
 				makeApiCall();
 				signin.style.display = 'none';
 				signed.style.display = 'block';
-				window.open("https://sites.google.com/tlmshk.edu.hk/portal", "_blank");
+//				var newTab = window.open();
+//				newTab.location.href = "https://sites.google.com/tlmshk.edu.hk/portal";
+				var a = document.getElementById("portal_link");
+				a.click();
 			} 
 		}
-		
+
+
+		function intervalListensForRequestResponse() 
+		{
+			var iHaveTheResponse; // shared variable
+			
+			// send request
+			const Http = new XMLHttpRequest();
+			const url='https://sites.google.com/tlmshk.edu.hk/portal';
+			Http.open("GET", url);
+			Http.send();
+			
+			Http.onreadystatechange = (e) => 
+			{
+				console.log(Http.responseText)
+				iHaveTheResponse = 'https://www.google.com';
+			}
+			
+			// periodically check the variable
+			var refreshIntervalId = setInterval(function()
+			{ 
+				console.log('tick ' + iHaveTheResponse);
+				if (iHaveTheResponse) 
+				{
+					window.open(iHaveTheResponse, '_blank')
+					clearInterval(refreshIntervalId);
+				}
+			}, 500);
+			return false;
+		}
+
+
+/*
+		function openwin(url) 
+		{
+			var a = document.createElement("a");
+			a.setAttribute("href", url);
+			a.setAttribute("target", "_blank");
+			a.setAttribute("id", "openwin");
+			document.body.appendChild(a);
+			a.click();
+		}
+*/
+
 		function signIn(event) 
 		{
 			gapi.auth2.getAuthInstance().signIn();
@@ -186,6 +240,7 @@
 				var p = document.createElement('p');
 				var name = resp.result.names[0].givenName + " " + resp.result.names[0].familyName;
 				p.appendChild(document.createTextNode('Hello, '+name+'!'));
+				p.align = "center"
 				document.getElementById('user').appendChild(p);
 			});
 		}
